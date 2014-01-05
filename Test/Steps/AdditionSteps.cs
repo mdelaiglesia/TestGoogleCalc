@@ -19,10 +19,6 @@ namespace Test.Steps
         public static void BeforeFeature()
         {
             Driver = new ChromeDriver();
-
-            Console.WriteLine("Feature: " + FeatureContext.Current.FeatureInfo.Title);
-            Console.WriteLine(FeatureContext.Current.FeatureInfo.Description);
-            Console.WriteLine("\r\nScenario: " + ScenarioContext.Current.ScenarioInfo.Title);
         }
 
         [AfterFeature]
