@@ -11,31 +11,29 @@ namespace Test.Steps
     [Binding]
     public class AdditionSteps
     {
-        public static IWebDriver Driver { get; set; }
-
         private GoogleCalcPage googleCalcPage;
 
         [BeforeFeature]
         public static void BeforeFeature()
         {
-            Driver = new ChromeDriver();
+            BasePageObject.CreateDriver();
         }
 
         [AfterFeature]
         public static void AfterFeature()
         {
-            Driver.Quit();
+            BasePageObject.QuitDriver();
         }
 
         public AdditionSteps()
         {
-            googleCalcPage = PageFactory.InitElements<GoogleCalcPage>(Driver);
+            googleCalcPage = PageFactory.InitElements<GoogleCalcPage>(BasePageObject.Driver);
         }
 
         [Given(@"I have entered into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator()
         {
-            Driver.Navigate().GoToUrl("http://www.google.com/search?q=0%2B0");
+            BasePageObject.Driver.Navigate().GoToUrl("http://www.google.com/search?q=0%2B0");
         }
 
         [When(@"I enter number '(.*)'")]
