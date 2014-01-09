@@ -10,4 +10,4 @@ Scenario: Add two numbers
 	And I press add
 	And I enter number '2'
 	And I press equals
-	Then the result should be 5 on the screen
+	Then the result should be 4 on the screen
