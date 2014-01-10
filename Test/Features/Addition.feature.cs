@@ -85,7 +85,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 12
  testRunner.And("I press equals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.Then("the result should be 5 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be 4 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
